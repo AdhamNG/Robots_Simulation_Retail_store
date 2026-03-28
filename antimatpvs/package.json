@@ -1,0 +1,26 @@
+{
+  "name": "antimatpvs",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "vite",
+    "dev:lan": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview",
+    "tunnel": "npx --yes cloudflared tunnel --url http://127.0.0.1:3000"
+  },
+  "dependencies": {
+    "@recast-navigation/three": "^0.43.0",
+    "monaco-editor": "~0.52.2",
+    "recast-navigation": "^0.43.0",
+    "three": "^0.170.0",
+    "typescript": "~5.7.2"
+  },
+  "devDependencies": {
+    "vite": "^6.2.0"
+  }
+}

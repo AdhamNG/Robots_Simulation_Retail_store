@@ -1,0 +1,12 @@
+# Render: New Web Service → connect this Git repo (root = this folder).
+# Dashboard: https://dashboard.render.com
+services:
+  - type: web
+    name: navme-editor
+    runtime: node
+    plan: free
+    buildCommand: npm ci && npm run build
+    startCommand: npm run preview
+    envVars:
+      - key: NODE_VERSION
+        value: '20'

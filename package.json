@@ -1,0 +1,10 @@
+{
+  "name": "antimatpvs-root",
+  "private": true,
+  "description": "Run npm from repo root — forwards to the antimatpvs app folder",
+  "scripts": {
+    "dev": "npm --prefix antimatpvs run dev",
+    "build": "npm --prefix antimatpvs run build",
+    "preview": "npm --prefix antimatpvs run preview"
+  }
+}
