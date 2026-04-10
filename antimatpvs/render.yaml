@@ -1,4 +1,5 @@
-# Render: New Web Service → connect this Git repo (root = this folder).
+# Render: only used if the service "Root Directory" is set to `antimatpvs`.
+# If the repo root is the project root, use ../render.yaml (build uses --prefix antimatpvs).
 # Dashboard: https://dashboard.render.com
 services:
   - type: web

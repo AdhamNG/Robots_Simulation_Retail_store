@@ -1,0 +1,13 @@
+# Render Blueprint (repo root). Installs and builds from `antimatpvs/` — root `npm ci` alone
+# installs nothing, so `vite` was missing → exit 127.
+# https://render.com/docs/blueprint-spec
+services:
+  - type: web
+    name: navme-editor
+    runtime: node
+    plan: free
+    buildCommand: npm ci --prefix antimatpvs && npm run build --prefix antimatpvs
+    startCommand: npm run preview --prefix antimatpvs
+    envVars:
+      - key: NODE_VERSION
+        value: '20'
