@@ -6,7 +6,9 @@ services:
     name: navme-editor
     runtime: node
     plan: free
-    buildCommand: npm ci --prefix antimatpvs && npm run build --prefix antimatpvs
+    # Root `npm install` must install antimatpvs (see package.json postinstall). Also works:
+    # npm ci --prefix antimatpvs && npm run build --prefix antimatpvs
+    buildCommand: npm install && npm run build
     startCommand: npm run preview --prefix antimatpvs
     envVars:
       - key: NODE_VERSION
